@@ -23,12 +23,13 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="48dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                tools:ignore="ExtraText">
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width=\"55dp\"
-                    android:layout_height=\"match_parent\"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/profile" />
 
@@ -164,7 +165,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:background="@drawable/white_bg_15"
@@ -175,19 +176,26 @@
                     android:id="@+id/refer_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
                     android:text="Refer Friends"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <TextView
                     android:id="@+id/refer_get_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Get $10"
                     android:textColor="@color/black"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottumOf="@+id/refer_title" />
 
                 <TextView
                     android:id="@+id/refer_description"
@@ -198,11 +206,14 @@
 
                 <Button
                     android:id="@+id/refer_button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:backgroundTint="@color/green"
-                    android:text="Get $15" />
+                    android:text="Get $15"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -282,4 +293,20 @@
             <!-- You would repeat the transaction item layout for each transaction -->
         </LinearLayout>
     </ScrollView>
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:cnb_menuResource="@menu/bottom_menu"
+        app:cnb_radius="50dp"
+        app:cnb_iconSize="20dp"
+        android:padding="4dp"
+        android:elevation="3dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/black_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingClass" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
